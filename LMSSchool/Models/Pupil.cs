@@ -9,6 +9,10 @@ internal class Pupil:IEnumerable
     private readonly IPupilCRUDService _pupilCRUDService;
     public Pupil()
     {
+        WriteToFileService writeToFileService = new WriteToFileService();
+        SendSmsTelegramService sendSmsTelegramService = new SendSmsTelegramService();
+        LogToConsoleService logToConsoleService = new LogToConsoleService();
+
         _pupilCRUDService = new PupilCRUDService();
         Console.WriteLine($"Name:");
         Name = Console.ReadLine();

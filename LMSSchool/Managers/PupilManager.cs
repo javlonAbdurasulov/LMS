@@ -36,7 +36,9 @@ internal class PupilManager
                     davom = false;
                     break;
                 case 1:
-                    _pupilCRUDService.Create(new Pupil());
+                    Pupil createPupil = new Pupil();
+                    _pupilCRUDService.Create(createPupil);
+                    OnObjectCreated.OnObjectCreat.Invoke(createPupil);
                     break;
                 case 2:
                     PrintPupil(_pupilCRUDService.GetAll());
@@ -44,7 +46,7 @@ internal class PupilManager
                 case 3:
                     Pupil pupil = new();
                     _pupilCRUDService.Update(pupil);
-                    //OnObjectUpdatedModel.OnObjectUpdated.Invoke(pupil);
+                    OnObjectUpdatedModel.OnObjectUpdated.Invoke(pupil);
                     break;
                 case 4:
                     Console.WriteLine("Id pupil for delete:\n");

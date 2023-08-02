@@ -1,14 +1,37 @@
-﻿using LMSSchool.Services.Intefaces;
+﻿using LMSSchool.Events;
+using LMSSchool.Services.Intefaces;
 
 namespace LMSSchool.Services.Classes;
 
+
 internal class WriteToFileService : IWriteToFileService
 {
-    public void WriteToFile(string filePath, string message)
+    static string path = @"../../../Database.txt";
+    public WriteToFileService()
     {
-        using(StreamWriter streamWriter = new StreamWriter(filePath))
+        OnOutConsole.OnOut += WriteToFile;
+        //OnObjectCreated.OnObjectCreat += WriteToFileCreate;
+        //OnObjectUpdatedModel.OnObjectUpdated += WriteToFileUpdate;
+    }
+    public void WriteToFile( string message, string filePath)
+    {
+        using(StreamWriter streamWriter = new StreamWriter(filePath,true))
         {
             streamWriter.WriteLine(message);
         }
     }
+    //public void WriteToFileCreate( object obj)
+    //{
+    //    using(StreamWriter streamWriter = new StreamWriter(path,true))
+    //    {
+    //        streamWriter.WriteLine(obj.GetType().GetProperty("Name")+" is create");
+    //    }
+    //}
+    //public void WriteToFileUpdate( object obj)
+    //{
+    //    using(StreamWriter streamWriter = new StreamWriter(path,true))
+    //    {
+    //        streamWriter.WriteLine(obj.GetType().GetProperty("Name")+" is update");
+    //    }
+    //}
 }

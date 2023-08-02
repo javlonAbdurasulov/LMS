@@ -15,6 +15,7 @@ internal class SubjectCRUDService : ISubjectCRUDService
     public void Create(Subject obj)
     {
         _subjects.Add(obj);
+        
     }
 
     public void Delete(Guid id)
@@ -32,7 +33,7 @@ internal class SubjectCRUDService : ISubjectCRUDService
 
     public IEnumerable<Subject> GetAll()
     {
-        //s
+        
         return _subjects;
     }
 

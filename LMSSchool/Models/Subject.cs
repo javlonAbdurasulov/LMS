@@ -11,11 +11,11 @@ internal class Subject
         Console.WriteLine($"Name Sub:");
         Name = Console.ReadLine();
         Console.WriteLine("\tGrades('6' for stop):\n");
-        byte grades=0;
+        byte grades = 0;
         Grades = new();
         while (true)
         {
-            grades=byte.Parse(Console.ReadLine());
+            grades = byte.Parse(Console.ReadLine());
             if (grades == 6) break;
             Grades.Add(grades);
         }
