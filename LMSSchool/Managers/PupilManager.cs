@@ -91,17 +91,4 @@ internal class PupilManager
             }
         }
     }
-    //private static void PrintPupil(Pupil pupilOUT)
-    //{
-    //    foreach (var item in pupilOUT)
-    //    {
-    //        Console.WriteLine(item);
-    //        item.
-
-    //        foreach (var item2 in item)
-    //        {
-    //            Console.WriteLine(item2);
-    //        }
-    //    }
-    //}
 }

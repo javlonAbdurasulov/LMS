@@ -20,6 +20,10 @@ internal class WriteToFileService : IWriteToFileService
             streamWriter.WriteLine(message);
         }
     }
+
+
+
+
     //public void WriteToFileCreate( object obj)
     //{
     //    using(StreamWriter streamWriter = new StreamWriter(path,true))

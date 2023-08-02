@@ -15,6 +15,9 @@ internal class LogToConsoleService : ILogToConsoleService
     {
         Console.WriteLine($"Log To Console: {message}");
     }
+
+
+
     //public void LogToConsoleCreate(object obj)
     //{
     //    Console.WriteLine($"Log To Console: {obj.GetType().GetProperty(".Name")} is create");
